@@ -11,8 +11,6 @@ public class CarTest {
 
   Car car;
 
-  public CarTest() {
-  }
 
   @BeforeClass(
       description = "Set car configurations"
@@ -20,6 +18,13 @@ public class CarTest {
   public void setUp() {
     System.out.println("Initializing the Car");
     this.car = new Car("Jo", 1, true, 50);
+  }
+
+  @Test (description = "Adding numberOfPassenger")
+  public void testAddingOfPassenger(){
+    Car car = new Car(1);
+    car.addPassenger();
+    Assert.assertEquals(car.getNumberOfPassengers(), 2, "Adding number of passengers function is not working as expected");
   }
 
   @Test(enabled = false, description = "Test for checking name")

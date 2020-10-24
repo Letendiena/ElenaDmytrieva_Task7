@@ -28,6 +28,13 @@ public class Car {
     mileage = 10;
   }
 
+  public Car(int value) {
+    numberOfPassengers = value;
+  }
+  public void addPassenger(){
+    numberOfPassengers++;
+  }
+
   public String write(String text) {
     System.out.println(text);
     return text;
@@ -70,6 +77,10 @@ public class Car {
 
   public static void method1() throws Exception {
     throw new Exception();
+  }
+
+  public int getNumberOfPassengers() {
+    return numberOfPassengers;
   }
 }
 
